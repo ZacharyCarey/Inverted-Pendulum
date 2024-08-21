@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2eq6fu3jhea"]
+
+[ext_resource type="Script" path="res://main_scene.cs" id="1_ppitd"]
+
+[node name="MainScene" type="Node2D" node_paths=PackedStringArray("Cart", "Pivot")]
+script = ExtResource("1_ppitd")
+Cart = NodePath("Anchor/Cart")
+Pivot = NodePath("Anchor/Cart/Pivot")
+ScaleX = 291.25
+
+[node name="Anchor" type="Node2D" parent="."]
+position = Vector2(53, 622)
+
+[node name="Cart" type="ColorRect" parent="Anchor"]
+offset_left = 5.0
+offset_top = -123.0
+offset_right = 267.0
+offset_bottom = -3.0
+color = Color(0.356863, 0.607843, 0.835294, 1)
+
+[node name="Pivot" type="Node2D" parent="Anchor/Cart"]
+position = Vector2(131, 0)
+
+[node name="ColorRect" type="ColorRect" parent="Anchor/Cart/Pivot"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -233.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.819608, 0.054902, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_right = 167.0
+offset_bottom = 84.0
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

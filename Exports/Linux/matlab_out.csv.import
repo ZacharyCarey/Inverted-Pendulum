@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dk5ad52oewrir"
+
+[deps]
+
+files=["res://Exports/Linux/matlab_out.x.translation", "res://Exports/Linux/matlab_out.theta.translation", "res://Exports/Linux/matlab_out.u.translation"]
+
+source_file="res://Exports/Linux/matlab_out.csv"
+dest_files=["res://Exports/Linux/matlab_out.x.translation", "res://Exports/Linux/matlab_out.theta.translation", "res://Exports/Linux/matlab_out.u.translation"]
+
+[params]
+
+compress=true
+delimiter=0
